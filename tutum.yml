@@ -1,8 +1,10 @@
-web:
-    image: .
-    links: db:db
-    ports: "80:80"
 db:
-    image: tutum/mysql:latest
-    environment:
-    MYSQL_PASS: "gfhjkm"
+  image: 'tutum/mysql:latest'
+  environment:
+    - 'MYSQL_PASS="gfhjkm"'
+web:
+  image: 'tutum.co/itscript/wm:latest'
+  links:
+    - db
+  ports:
+    - '80:80'
