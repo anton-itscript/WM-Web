@@ -63,11 +63,13 @@ ADD ./supervisord.conf /etc/supervisord.conf
 ADD ./start.sh /start.sh
 RUN chmod 755 /start.sh
 
-# Setup Volume
-RUN mkdir /usr/share/nginx/html
+# Setup Volume fo logs and runtimes
 
-# add test PHP file
+
+# Add application code
 ADD ./index.php /usr/share/nginx/html/index.php
+
+# Set access rights
 RUN chown -Rf www-data.www-data /usr/share/nginx/html/
 
 # Expose Ports
