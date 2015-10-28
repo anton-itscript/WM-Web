@@ -53,7 +53,7 @@ find /etc/php5/cli/conf.d/ -name "*.ini" -exec sed -i -re 's/^(\s*)#(.*)/\1;\2/g
 RUN rm -Rf /etc/nginx/conf.d/* && \
 rm -Rf /etc/nginx/sites-available/default && \
 mkdir -p /etc/nginx/ssl/
-ADD ./nginx-site.conf /etc/nginx/sites-available/default.conf
+ADD ./nginx-wm.conf /etc/nginx/sites-available/default.conf
 RUN ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
 
 # Supervisor Config
@@ -67,10 +67,26 @@ RUN chmod 755 /start.sh
 
 
 # Add application code
-ADD ./index.php /usr/share/nginx/html/index.php
+#ADD ./index.php /usr/share/nginx/html/index.php
+
+
+ADD ./application /usr/share/nginx/html/
+RUN chown -Rf www-data.www-data /usr/share/nginx/html/ &&  chmod -R 0777 /usr/share/nginx/html/
+
+run uname -mrs
+
+VOLUME ["/var/spool/cron/crontabs/"]
+VOLUME ["/var/www/assets"]
+VOLUME ["/usr/share/nginx/html/log"]
+VOLUME ["/usr/share/nginx/html/protected/config"]
+VOLUME ["/usr/share/nginx/html/protected/runtime"]
+
+
+
+
 
 # Set access rights
-RUN chown -Rf www-data.www-data /usr/share/nginx/html/
+RUN chown -Rf www-data.www-data /usr/share/nginx/html/  &&  chmod -R 0777 /usr/share/nginx/html/
 
 # Expose Ports
 EXPOSE 443
