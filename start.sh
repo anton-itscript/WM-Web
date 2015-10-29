@@ -10,5 +10,6 @@ echo -e "Host *\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 procs=$(cat /proc/cpuinfo |grep processor | wc -l)
 sed -i -e "s/worker_processes 5/worker_processes $procs/" /etc/nginx/nginx.conf
 
+service cron start  
 # Start supervisord and services
 /usr/bin/supervisord -n -c /etc/supervisord.conf
