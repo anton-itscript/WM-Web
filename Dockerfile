@@ -16,7 +16,7 @@ nginx=stable && \
 add-apt-repository ppa:nginx/$nginx && \
 apt-get update && \
 apt-get upgrade -y && \
-BUILD_PACKAGES="supervisor nginx php5-fpm git php5-mysql php-apc php5-curl php5-gd php5-intl php5-mcrypt php5-memcache php5-sqlite php5-tidy php5-xmlrpc php5-xsl php5-pgsql php5-mongo pwgen nano mc" && \
+BUILD_PACKAGES="supervisor nginx php5-fpm git php5-mysql php-apc php5-curl php5-gd php5-intl php5-mcrypt php5-memcache php5-sqlite php5-tidy php5-xmlrpc php5-xsl php5-pgsql php5-mongo pwgen nano mc rsyslog cron screen" && \
 apt-get -y install $BUILD_PACKAGES && \
 apt-get remove --purge -y software-properties-common && \
 apt-get autoremove -y && \
@@ -67,20 +67,18 @@ RUN chmod 755 /start.sh
 
 
 # Add application code
-#ADD ./index.php /usr/share/nginx/html/index.php
-
 
 ADD ./application /usr/share/nginx/html/
 ADD ./cron-www-data /var/spool/cron/crontabs/www-data
 
-RUN chown -Rf www-data.www-data /usr/share/nginx/html/ &&  chmod -R 0777 /usr/share/nginx/html/
+
+
+RUN chown -Rf www-data.www-data /usr/share/nginx/html/ &&  chmod -R 0777 /usr/share/nginx/html/ && chown  www-data.crontab /var/spool/cron/crontabs/www-data &&  chmod  0600 /var/spool/cron/crontabs/www-data
 
 run uname -mrs
 
-#VOLUME ["/var/spool/cron/crontabs/"]
-#VOLUME ["/var/www/assets"]
+
 VOLUME ["/usr/share/nginx/html/log"]
-#VOLUME ["/usr/share/nginx/html/protected/config"]
 VOLUME ["/usr/share/nginx/html/protected/runtime"]
 
 
