@@ -1,12 +1,4 @@
-* * * * * echo time >>  /tmp/crontest.txt 
-* * * * * /usr/bin/php -f  /usr/share/nginx/html/www/console.php generatemessage YANGO delaircoGenerateMessage
-* * * * * /usr/bin/php -f  /usr/share/nginx/html/www/console.php generatemessage MANDA delaircoGenerateMessage
-* * * * * /usr/bin/php -f  /usr/share/nginx/html/www/console.php generatemessage PATHE delaircoGenerateMessage
-* * * * * /usr/bin/php -f  /usr/share/nginx/html/www/console.php generatemessage TAUNG delaircoGenerateMessage
-* * * * * /usr/bin/php -f  /usr/share/nginx/html/www/console.php generatemessage NAYPY delaircoGenerateMessage
-* * * * * /usr/bin/php -f  /usr/share/nginx/html/www/console.php generatemessage SITTW delaircoGenerateMessage
-* * * * * /usr/bin/php -f  /usr/share/nginx/html/www/console.php generatemessage YANGA delaircoGenerateMessage
-                                                                                                                
+                                                                                                      
 * * * * * /usr/bin/php -f  /usr/share/nginx/html/www/console.php schedule #delaircoScheduleScript                                                                                                                                                               
 * * * * * /usr/bin/php -f  /usr/share/nginx/html/www/console.php getxml #delaircoGetXml                                                                                                                                                                         
 * * * * * /usr/bin/php -f  /usr/share/nginx/html/www/console.php checkprocesses #delaircoCheckProcessesScript                                                                                                                                                   
