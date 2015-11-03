@@ -1,0 +1,4 @@
+[2015-10-26 10:29:01]: PrepareCommand::run synchronization stopped
+[2015-10-26 10:29:01]: PrepareCommand::run_process_base
+[2015-10-26 10:29:01]: PrepareCommand::run_process_base role none; 
+[2015-10-26 10:29:01]: PrepareCommand::run_process_base find  messages, that have been received in a base mode

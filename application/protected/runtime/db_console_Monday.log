@@ -1,0 +1,264 @@
+2015/10/26 10:23:04 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:23:04 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:23:04 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:23:04 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:23:04 [trace] [system.db.ar.CActiveRecord] Listener.findAll()
+2015/10/26 10:23:04 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:23:04 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:23:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `listener`
+2015/10/26 10:23:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `listener`
+2015/10/26 10:23:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `listener` `t` WHERE stopped=:ycp0
+2015/10/26 10:23:04 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:23:04 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:23:04 [error] [php] require(): Filename cannot be empty (/var/www/protected/helpers/loadFile.php:36)
+Stack trace:
+#0 /var/www/protected/helpers/Synchronization/Synchronization.php(59): loadFile->getFileData()
+#1 /var/www/protected/commands/PrepareCommand.php(34): Synchronization->__construct()
+#2 /var/www/yii/console/CConsoleCommandRunner.php(71): PrepareCommand->run()
+#3 /var/www/yii/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /var/www/yii/base/CApplication.php(184): CConsoleApplication->processRequest()
+#5 /var/www/www/console.php(25): CConsoleApplication->run()
+
+2015/10/26 10:23:04 [trace] [system.CModule] Loading "errorHandler" application component
+2015/10/26 10:23:04 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:23:04 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:23:04 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:23:04 [trace] [system.db.CDbCommand] Executing SQL: SET time_zone='+00:00';
+2015/10/26 10:23:04 [trace] [system.db.ar.CActiveRecord] ScheduleReport.findAll()
+2015/10/26 10:23:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report`
+2015/10/26 10:23:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `schedule_report`
+2015/10/26 10:23:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report_to_station`
+2015/10/26 10:23:04 [trace] [system.CModule] Loading "coreMessages" application component
+2015/10/26 10:23:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:24:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:24:02 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:24:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:24:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:24:02 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:24:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:24:02 [trace] [system.db.ar.CActiveRecord] Listener.findAll()
+2015/10/26 10:24:02 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:24:02 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:24:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `listener`
+2015/10/26 10:24:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `listener`
+2015/10/26 10:24:02 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `listener` `t` WHERE stopped=:ycp0
+2015/10/26 10:24:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:24:02 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:24:02 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:24:02 [trace] [system.db.CDbCommand] Executing SQL: SET time_zone='+00:00';
+2015/10/26 10:24:02 [trace] [system.db.ar.CActiveRecord] ScheduleReport.findAll()
+2015/10/26 10:24:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report`
+2015/10/26 10:24:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `schedule_report`
+2015/10/26 10:24:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report_to_station`
+2015/10/26 10:24:02 [trace] [system.CModule] Loading "coreMessages" application component
+2015/10/26 10:24:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:25:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:25:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:25:01 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:25:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:25:01 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:25:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:25:01 [trace] [system.db.ar.CActiveRecord] Listener.findAll()
+2015/10/26 10:25:01 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:25:01 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:25:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `listener`
+2015/10/26 10:25:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `listener`
+2015/10/26 10:25:02 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `listener` `t` WHERE stopped=:ycp0
+2015/10/26 10:25:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:25:01 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:25:01 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:25:01 [trace] [system.db.CDbCommand] Executing SQL: SET time_zone='+00:00';
+2015/10/26 10:25:02 [trace] [system.db.ar.CActiveRecord] ScheduleReport.findAll()
+2015/10/26 10:25:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report`
+2015/10/26 10:25:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `schedule_report`
+2015/10/26 10:25:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report_to_station`
+2015/10/26 10:25:02 [trace] [system.CModule] Loading "coreMessages" application component
+2015/10/26 10:25:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:26:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:26:01 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:26:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:26:01 [trace] [system.db.ar.CActiveRecord] Listener.findAll()
+2015/10/26 10:26:01 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:26:01 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:26:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `listener`
+2015/10/26 10:26:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `listener`
+2015/10/26 10:26:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `listener` `t` WHERE stopped=:ycp0
+2015/10/26 10:26:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:26:01 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:26:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:26:01 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:26:01 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:26:01 [trace] [system.db.CDbCommand] Executing SQL: SET time_zone='+00:00';
+2015/10/26 10:26:01 [trace] [system.db.ar.CActiveRecord] ScheduleReport.findAll()
+2015/10/26 10:26:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report`
+2015/10/26 10:26:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `schedule_report`
+2015/10/26 10:26:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report_to_station`
+2015/10/26 10:26:01 [trace] [system.CModule] Loading "coreMessages" application component
+2015/10/26 10:26:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:26:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:26:01 [trace] [system.db.ar.CActiveRecord] Settings.findByPk()
+2015/10/26 10:26:01 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:26:01 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:26:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `settings`
+2015/10/26 10:26:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `settings`
+2015/10/26 10:26:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `settings` `t` WHERE `t`.`setting_id`=1 LIMIT 1
+2015/10/26 10:26:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `xml_process_log`
+2015/10/26 10:26:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `xml_process_log`
+2015/10/26 10:26:01 [trace] [system.db.ar.CActiveRecord] XmlLog.insert()
+2015/10/26 10:26:01 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `xml_process_log` (`created`, `updated`, `comment`) VALUES (NOW(), NOW(), :yp0)
+2015/10/26 10:27:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:27:01 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:27:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:27:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:27:02 [trace] [system.db.ar.CActiveRecord] Listener.findAll()
+2015/10/26 10:27:02 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:27:02 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:27:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `listener`
+2015/10/26 10:27:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `listener`
+2015/10/26 10:27:02 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `listener` `t` WHERE stopped=:ycp0
+2015/10/26 10:27:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:27:02 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:27:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:27:02 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:27:02 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:27:02 [trace] [system.db.CDbCommand] Executing SQL: SET time_zone='+00:00';
+2015/10/26 10:27:02 [trace] [system.db.ar.CActiveRecord] ScheduleReport.findAll()
+2015/10/26 10:27:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report`
+2015/10/26 10:27:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `schedule_report`
+2015/10/26 10:27:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report_to_station`
+2015/10/26 10:27:02 [trace] [system.CModule] Loading "coreMessages" application component
+2015/10/26 10:27:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:28:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:28:01 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:28:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:28:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:28:01 [trace] [system.db.ar.CActiveRecord] Listener.findAll()
+2015/10/26 10:28:01 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:28:01 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:28:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `listener`
+2015/10/26 10:28:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `listener`
+2015/10/26 10:28:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `listener` `t` WHERE stopped=:ycp0
+2015/10/26 10:28:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:28:01 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:28:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:28:01 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:28:01 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:28:01 [trace] [system.db.CDbCommand] Executing SQL: SET time_zone='+00:00';
+2015/10/26 10:28:01 [trace] [system.db.ar.CActiveRecord] ScheduleReport.findAll()
+2015/10/26 10:28:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report`
+2015/10/26 10:28:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `schedule_report`
+2015/10/26 10:28:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report_to_station`
+2015/10/26 10:28:01 [trace] [system.CModule] Loading "coreMessages" application component
+2015/10/26 10:28:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:29:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:29:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:29:01 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:29:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:29:01 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:29:01 [trace] [system.db.ar.CActiveRecord] ListenerLogTemp.findAll()
+2015/10/26 10:29:01 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:29:01 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:29:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `listener_log_temp`
+2015/10/26 10:29:02 [trace] [system.CModule] Loading "coreMessages" application component
+2015/10/26 10:29:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.listener_log_temp' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `listener_log_temp`.
+2015/10/26 10:29:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:29:01 [trace] [system.db.ar.CActiveRecord] Listener.findAll()
+2015/10/26 10:29:01 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:29:01 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:29:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `listener`
+2015/10/26 10:29:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `listener`
+2015/10/26 10:29:02 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `listener` `t` WHERE stopped=:ycp0
+2015/10/26 10:29:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:29:02 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:29:02 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:29:02 [trace] [system.db.CDbCommand] Executing SQL: SET time_zone='+00:00';
+2015/10/26 10:29:02 [trace] [system.db.ar.CActiveRecord] ScheduleReport.findAll()
+2015/10/26 10:29:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report`
+2015/10/26 10:29:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `schedule_report`
+2015/10/26 10:29:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report_to_station`
+2015/10/26 10:29:02 [trace] [system.CModule] Loading "coreMessages" application component
+2015/10/26 10:29:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:30:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:30:01 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:30:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:30:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:30:01 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:30:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:30:01 [trace] [system.db.ar.CActiveRecord] Listener.findAll()
+2015/10/26 10:30:01 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:30:01 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:30:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `listener`
+2015/10/26 10:30:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `listener`
+2015/10/26 10:30:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `listener` `t` WHERE stopped=:ycp0
+2015/10/26 10:30:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:30:01 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:30:01 [trace] [system.db.ar.CActiveRecord] Config.findAll()
+2015/10/26 10:30:01 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:30:01 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:30:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `config`
+2015/10/26 10:30:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `config`
+2015/10/26 10:30:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `config` `t` WHERE t.key LIKE :key ORDER BY t.key
+2015/10/26 10:30:01 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:30:01 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:30:01 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:30:01 [trace] [system.db.CDbCommand] Executing SQL: SET time_zone='+00:00';
+2015/10/26 10:30:01 [trace] [system.db.ar.CActiveRecord] ScheduleReport.findAll()
+2015/10/26 10:30:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report`
+2015/10/26 10:30:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `schedule_report`
+2015/10/26 10:30:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report_to_station`
+2015/10/26 10:30:01 [trace] [system.CModule] Loading "coreMessages" application component
+2015/10/26 10:30:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:31:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:31:02 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:31:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:31:02 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:31:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:31:02 [trace] [system.db.ar.CActiveRecord] Listener.findAll()
+2015/10/26 10:31:02 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:31:02 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:31:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `listener`
+2015/10/26 10:31:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `listener`
+2015/10/26 10:31:02 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `listener` `t` WHERE stopped=:ycp0
+2015/10/26 10:31:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:31:02 [trace] [system.db.ar.CActiveRecord] Settings.findByPk()
+2015/10/26 10:31:02 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:31:02 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:31:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `settings`
+2015/10/26 10:31:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `settings`
+2015/10/26 10:31:02 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `settings` `t` WHERE `t`.`setting_id`=1 LIMIT 1
+2015/10/26 10:31:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `xml_process_log`
+2015/10/26 10:31:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `xml_process_log`
+2015/10/26 10:31:02 [trace] [system.db.ar.CActiveRecord] XmlLog.insert()
+2015/10/26 10:31:02 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `xml_process_log` (`created`, `updated`, `comment`) VALUES (NOW(), NOW(), :yp0)
+2015/10/26 10:31:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:31:02 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:31:02 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:31:02 [trace] [system.db.CDbCommand] Executing SQL: SET time_zone='+00:00';
+2015/10/26 10:31:02 [trace] [system.db.ar.CActiveRecord] ScheduleReport.findAll()
+2015/10/26 10:31:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report`
+2015/10/26 10:31:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `schedule_report`
+2015/10/26 10:31:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report_to_station`
+2015/10/26 10:31:02 [trace] [system.CModule] Loading "coreMessages" application component
+2015/10/26 10:31:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:32:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:32:02 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:32:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:32:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:32:02 [trace] [system.CModule] Loading "mutex" application component
+2015/10/26 10:32:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:32:02 [trace] [system.db.ar.CActiveRecord] Listener.findAll()
+2015/10/26 10:32:02 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:32:02 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:32:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `listener`
+2015/10/26 10:32:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `listener`
+2015/10/26 10:32:02 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `listener` `t` WHERE stopped=:ycp0
+2015/10/26 10:32:02 [trace] [system.CModule] Loading "log" application component
+2015/10/26 10:32:02 [trace] [system.CModule] Loading "db" application component
+2015/10/26 10:32:02 [trace] [system.db.CDbConnection] Opening DB connection
+2015/10/26 10:32:02 [trace] [system.db.CDbCommand] Executing SQL: SET time_zone='+00:00';
+2015/10/26 10:32:02 [trace] [system.db.ar.CActiveRecord] ScheduleReport.findAll()
+2015/10/26 10:32:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report`
+2015/10/26 10:32:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `schedule_report`
+2015/10/26 10:32:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `schedule_report_to_station`
+2015/10/26 10:32:02 [trace] [system.CModule] Loading "coreMessages" application component
+2015/10/26 10:32:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.

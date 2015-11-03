@@ -1,0 +1,46 @@
+2015/10/26 10:23:01 [trace] [system.CModule] Loading "log" application component
+in /var/www/www/index.php (51)
+2015/10/26 10:23:01 [trace] [system.CModule] Loading "request" application component
+in /var/www/www/index.php (51)
+2015/10/26 10:23:01 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/www/index.php (51)
+2015/10/26 10:23:01 [trace] [system.CModule] Loading "user" application component
+in /var/www/protected/controllers/MaintenanceController.php (21)
+in /var/www/www/index.php (51)
+2015/10/26 10:23:02 [trace] [system.CModule] Loading "session" application component
+in /var/www/protected/controllers/MaintenanceController.php (21)
+in /var/www/www/index.php (51)
+2015/10/26 10:23:02 [trace] [system.db.ar.CActiveRecord] Settings.findByPk()
+in /var/www/protected/models/CStubActiveRecord.php (199)
+in /var/www/protected/components/WebUser.php (65)
+in /var/www/protected/components/WebUser.php (73)
+2015/10/26 10:23:02 [trace] [system.CModule] Loading "db" application component
+in /var/www/protected/models/CStubActiveRecord.php (23)
+in /var/www/protected/models/CStubActiveRecord.php (40)
+in /var/www/protected/models/CStubActiveRecord.php (199)
+2015/10/26 10:23:02 [trace] [system.db.CDbConnection] Opening DB connection
+in /var/www/protected/models/CStubActiveRecord.php (23)
+in /var/www/protected/models/CStubActiveRecord.php (40)
+in /var/www/protected/models/CStubActiveRecord.php (199)
+2015/10/26 10:23:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `settings`
+in /var/www/protected/models/CStubActiveRecord.php (199)
+in /var/www/protected/components/WebUser.php (65)
+in /var/www/protected/components/WebUser.php (73)
+2015/10/26 10:23:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `settings`
+in /var/www/protected/models/CStubActiveRecord.php (199)
+in /var/www/protected/components/WebUser.php (65)
+in /var/www/protected/components/WebUser.php (73)
+2015/10/26 10:23:02 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `settings` `t` WHERE `t`.`setting_id`=1 LIMIT 1
+in /var/www/protected/models/CStubActiveRecord.php (199)
+in /var/www/protected/components/WebUser.php (65)
+in /var/www/protected/components/WebUser.php (73)
+2015/10/26 10:23:02 [trace] [system.db.CDbCommand] Executing SQL: SET time_zone='+00:00';
+in /var/www/protected/helpers/TimezoneWork.php (72)
+in /var/www/protected/controllers/MaintenanceController.php (26)
+in /var/www/www/index.php (51)
+2015/10/26 10:23:02 [trace] [system.web.filters.CFilterChain] Running filter SiteController.filteraccessControl()
+in /var/www/protected/controllers/MaintenanceController.php (30)
+in /var/www/www/index.php (51)
+2015/10/26 10:23:02 [trace] [system.CModule] Loading "coreMessages" application component
+in /var/www/protected/controllers/MaintenanceController.php (30)
+in /var/www/www/index.php (51)

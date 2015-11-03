@@ -1,0 +1,20 @@
+2015/10/26 10:23:04 [error] [php] require(): Filename cannot be empty (/var/www/protected/helpers/loadFile.php:36)
+Stack trace:
+#0 /var/www/protected/helpers/Synchronization/Synchronization.php(59): loadFile->getFileData()
+#1 /var/www/protected/commands/PrepareCommand.php(34): Synchronization->__construct()
+#2 /var/www/yii/console/CConsoleCommandRunner.php(71): PrepareCommand->run()
+#3 /var/www/yii/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /var/www/yii/base/CApplication.php(184): CConsoleApplication->processRequest()
+#5 /var/www/www/console.php(25): CConsoleApplication->run()
+
+2015/10/26 10:23:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:24:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:25:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:26:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:27:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:28:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:29:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.listener_log_temp' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `listener_log_temp`.
+2015/10/26 10:29:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:30:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:31:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
+2015/10/26 10:32:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wm_docker.schedule_report_to_station' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schedule_report_to_station`.
