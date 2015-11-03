@@ -91,5 +91,6 @@ RUN chown -Rf www-data.www-data /usr/share/nginx/html/  &&  chmod -R 0777 /usr/s
 # Expose Ports
 EXPOSE 443
 EXPOSE 80
+EXPOSE 4000-15000
 
 CMD ["/bin/bash", "/start.sh"]
