@@ -2,6 +2,7 @@ wm-host-image:
   build: WM-Web
   ports:
   - 9998:80
+  - "20-10000"
   links:
   - wm-db-image
   volumes:
