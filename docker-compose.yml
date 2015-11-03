@@ -1,0 +1,25 @@
+wm-host-image:
+  build: WM-Web
+  ports:
+  - 9998:80
+  links:
+  - wm-db-image
+  volumes:
+  - /var/docker/wm/web/log:/usr/share/nginx/html/log
+  - /var/docker/wm/web/protected/runtime:/usr/share/nginx/html/protected/runtime
+  
+wm-db-image:
+  build: WM-Db
+  ports:
+  - 3307:3306
+  environment:
+    MYSQL_ROOT_PASSWORD: "wm_root"
+    MYSQL_USER:"wm"
+    MYSQL_PASS:"wm_pass"
+    ON_CREATE_DB_1:"wm_docker"
+    ON_CREATE_DB_2:"wm_docker_long"
+    STARTUP_SQL_1:"/tmp/wm_clear_databases/wm_docker.sql"
+    STARTUP_SQL_2:"/tmp/wm_clear_databases/wm_docker_long.sql"
+  volumes:
+  - /var/docker/wm/db/var/lib/mysql:/var/lib/mysql
+  
