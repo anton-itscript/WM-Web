@@ -89,8 +89,7 @@ VOLUME ["/usr/share/nginx/html/protected/runtime"]
 RUN chown -Rf www-data.www-data /usr/share/nginx/html/  &&  chmod -R 0777 /usr/share/nginx/html/
 
 # Expose Ports
-EXPOSE 443
-EXPOSE 80
-EXPOSE 4000-15000
+
+EXPOSE 5001-5010
 
 CMD ["/bin/bash", "/start.sh"]
