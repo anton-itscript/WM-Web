@@ -6,7 +6,6 @@
 		)
 	);
 
-	$this->renderPartial('../_tmpls/admin_connections_submenu', array(), false, true ); 
 ?>
 
 <div class="middlewide">

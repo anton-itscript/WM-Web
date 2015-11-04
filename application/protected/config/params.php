@@ -1,6 +1,11 @@
 <?php 
  return array (
-    'install'=>                 requireIfFileExist(dirname(__FILE__) . DIRECTORY_SEPARATOR .'params'. DIRECTORY_SEPARATOR .'install.php'),
+    'install'=>                 requireMorefiles(
+    array(
+        dirname(__FILE__) . DIRECTORY_SEPARATOR .'params'. DIRECTORY_SEPARATOR .'install.php',
+        dirname(__FILE__) . DIRECTORY_SEPARATOR .'params'. DIRECTORY_SEPARATOR .'install_db.php',
+        dirname(__FILE__) . DIRECTORY_SEPARATOR .'params'. DIRECTORY_SEPARATOR .'install_db_long.php',
+    )),
     'applications'=> 	        requireIfFileExist(dirname(__FILE__) . DIRECTORY_SEPARATOR .'params'. DIRECTORY_SEPARATOR .'application_params.php'),
     'db_long_sync_config'=> 	requireIfFileExist(dirname(__FILE__) . DIRECTORY_SEPARATOR .'params'. DIRECTORY_SEPARATOR .'database_long_sync_config.php'),
     'schedule_params'=> 	    requireIfFileExist(dirname(__FILE__) . DIRECTORY_SEPARATOR .'params'. DIRECTORY_SEPARATOR .'schedule_params.php'),

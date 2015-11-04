@@ -16,3 +16,12 @@ function requireIfFileExist($filepath)
 
     return array();
 }
+
+function requireMorefiles($filepathArray)
+{
+    $array = array();
+    foreach ($filepathArray as $filepath) {
+        $array = array_merge($array,requireIfFileExist($filepath));
+    }
+    return $array;
+}

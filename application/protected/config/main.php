@@ -39,6 +39,7 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'applications_param_incl.
             'application.widgets.MainMenu.MainMenu',
             'application.widgets.mailSender.mailSender',
 			'application.extensions.Color',
+			'application.extensions.TextFileWorker',
 		),
 
 		// application components
