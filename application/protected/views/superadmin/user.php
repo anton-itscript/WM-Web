@@ -1,10 +1,7 @@
 
 <div class="middlenarrow">
     <h1>
-
-        <?php
-        echo $user->user_id ? "Edit " . $user->username : "New User";
-        ?>
+        <?php echo $user->user_id ? "Edit " . $user->username : "New User"; ?>
     </h1>
 
     <?php echo CHtml::beginForm($this->createUrl('superadmin/user'), 'post'); ?>
@@ -42,12 +39,14 @@
             <?php echo CHtml::activePasswordField($user, 'pass2', array('style' => 'width: 300px;')); ?>
             <?php echo CHtml::error($user, 'pass2'); ?>
         </td>
+        <?php if (!$user->isSuperAdmin()){?>
         <tr>
             <th><?php echo CHtml::activeLabel($user, 'role'); ?> <sup>*</sup></th>
             <td colspan="3">
                 <?php echo CHtml::activeDropDownList($user, 'role', array_slice(Yii::app()->params['user_role'],0), array('style' => 'width: 270px;')); ?>
             </td>
         </tr>
+
         <tr>
             <th><?php echo CHtml::activeLabel($user, 'access'); ?></th>
             <td>
@@ -69,6 +68,7 @@
                 ?>
             </td>
         </tr>
+        <?php }?>
         <tr>
             <td>&nbsp;</td>
             <td colspan="3" style="text-align: left;"><?php echo CHtml::submitButton($user->user_id ? 'Update' : 'Add'); ?></td>

@@ -80,10 +80,13 @@ run uname -mrs
 
 VOLUME ["/usr/share/nginx/html/log"]
 VOLUME ["/usr/share/nginx/html/protected/runtime"]
-
-
-
-
+VOLUME ["/usr/share/nginx/html/protected/nosqlvars"]
+VOLUME ["/usr/share/nginx/html/protected/migrations"]
+VOLUME ["/usr/share/nginx/html/www/files/backups"]
+VOLUME ["/usr/share/nginx/html/www/files/schedule_reports"]
+VOLUME ["/usr/share/nginx/html/www/files/schedule_type_reports"]
+VOLUME ["/usr/share/nginx/html/www/files/xml_messages"]
+VOLUME ["/usr/share/nginx/html/www/files/weather_monitor_reports"]
 
 # Set access rights
 RUN chown -Rf www-data.www-data /usr/share/nginx/html/  &&  chmod -R 0777 /usr/share/nginx/html/

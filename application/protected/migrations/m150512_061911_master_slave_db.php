@@ -53,79 +53,8 @@ class m150512_061911_master_slave_db extends CDbMigration
         $command=$connection->createCommand($sql);
         $command->execute();
 
-        $content = "<?php
- return array (
-  'SERVER_IP' =>
-  array (
-    'label' => 'Control Server IP',
-    'value' => '95.170.145.180',
-  ),
-  'SERVER_PORT' =>
-  array (
-    'label' => 'Control listening port',
-    'value' => '5901',
-  ),
-  'REMOTE_SERVER_IP' =>
-  array (
-    'label' => 'Control remote IP',
-    'value' => '192.168.101.202',
-  ),
-  'REMOTE_SERVER_PORT' =>
-  array (
-    'label' => 'Control remote port',
-    'value' => '5902',
-  ),
-  'SWITCH_VARIANT' =>
-  array (
-    'label' => 'Mode (Fixed, Flexible)',
-    'value' => '1',
-  ),
-  'FLEXIBILITY_ROLE' =>
-  array (
-    'label' => 'Flexibility role',
-    'value' => '1',
-  ),
-  'MAIN_ROLE' =>
-  array (
-    'label' => 'Main role',
-    'value' => '1',
-  ),
-  'FOR_COMES_FORWARDING_MESSAGES_IP' =>
-  array (
-    'label' => 'Receiving messages IP',
-    'value' => '95.170.145.180',
-  ),
-  'FOR_COMES_FORWARDING_MESSAGES_PORT' =>
-  array (
-    'label' => 'Receiving messages  PORT',
-    'value' => '5910',
-  ),
-  'FOR_SEND_MESSAGES_TO_IP' =>
-  array (
-    'label' => 'Send messages IP',
-    'value' => '192.168.101.202',
-  ),
-  'FOR_SEND_MESSAGES_PORT' =>
-  array (
-    'label' => 'Send messages  PORT',
-    'value' => '5910',
-  ),
-  'PROCESS_STATUS' =>
-  array (
-    'label' => NULL,
-    'value' => 'stopped',
-  ),
-  'LISTENER_ID_FROM_MASTER' => false,
-  'MASTER_TCP_SERVER_COMMAND_PID' => false,
-  'SYNS_STATUS_COMMAND_PID' => false,
-  'IDENTIFICATOR' =>
-  array (
-    'label' => 'Identificator',
-    'value' => 'DEMO1',
-  ),
-)
- ?>";
-        file_put_contents(Yii::app()->getBasePath().DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.$this->filename,$content);
+
+       
 	}
 
 	public function down()
@@ -138,8 +67,8 @@ class m150512_061911_master_slave_db extends CDbMigration
         $command=$connection->createCommand($sql);
         $command->execute();
 
-        if(is_file(Yii::app()->getBasePath().DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.$this->filename))
-            unlink(Yii::app()->getBasePath().DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.$this->filename);
+        if(is_file(Yii::app()->getBasePath().DIRECTORY_SEPARATOR.'nosqlvars'.DIRECTORY_SEPARATOR.$this->filename))
+            unlink(Yii::app()->getBasePath().DIRECTORY_SEPARATOR.'nosqlvars'.DIRECTORY_SEPARATOR.$this->filename);
 	}
 
 	/*

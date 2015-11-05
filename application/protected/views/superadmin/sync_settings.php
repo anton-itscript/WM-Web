@@ -104,6 +104,6 @@
     <?=CHtml::endForm(); ?>
 
     <?=CHtml::beginForm($this->createUrl('superadmin/syncsettings'), 'post'); ?>
-        <?=CHtml::submitButton($synchronization->process_status=='stopped' ?   'Start process' : 'Stop process'   , array('name' => 'process_start'))?>
+        <?=CHtml::submitButton(($synchronization->process_status=='stopped' or $synchronization->process_status=='')  ?    'Start process' : 'Stop process'  , array('name' => 'process_start'))?>
     <?=CHtml::endForm(); ?>
 </div>

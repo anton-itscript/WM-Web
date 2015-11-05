@@ -51,10 +51,11 @@ class Synchronization
 
     public function __construct()
     {
-        // for read
-        $this->_loadedFile = new loadFile(self::getSettingsFilePath());
         // for write
         $this->_configForm = new ConfigForm(self::getSettingsFilePath());
+
+        // for read
+        $this->_loadedFile = new loadFile(self::getSettingsFilePath());
 
         $this->_data                    = $this->_loadedFile->getFileData();
 
@@ -75,12 +76,11 @@ class Synchronization
         $this->server_ip                = $this->_data['SERVER_IP']['value'];
         $this->server_port              = $this->_data['SERVER_PORT']['value'];
 
-
     }
 
     public static function getSettingsFilePath(){
 
-        return Yii::app()->getBasePath().DIRECTORY_SEPARATOR.''.'config'.DIRECTORY_SEPARATOR.self::file_settings;
+        return Yii::app()->getBasePath().DIRECTORY_SEPARATOR.''.'nosqlvars'.DIRECTORY_SEPARATOR.self::file_settings;
     }
 
     public function switchProcess()
@@ -96,11 +96,9 @@ class Synchronization
 
         if ($this->process_status=='processed') {
 
-
             $this->startListenFromMasterForwardingMessages();
             $this->startTcpServer();
             $this->startTcpClient();
-
             $this->startCronTask();
 
         } else {
@@ -108,7 +106,6 @@ class Synchronization
             $this->stopListenFromMasterForwardingMessages();
             $this->stopTcpServer();
             $this->stopTcpClient();
-
             $this->clearCronTask($this->cron_process_sync_status_command_id);
 
         }

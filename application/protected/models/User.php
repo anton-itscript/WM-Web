@@ -70,4 +70,9 @@ class User extends CStubActiveRecord
 
     }
 
+    public function isSuperAdmin()
+    {
+        return $this->role == 'superadmin';
+    }
+
 }
