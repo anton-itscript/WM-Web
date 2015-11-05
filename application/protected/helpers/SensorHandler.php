@@ -685,6 +685,11 @@ class SensorHandler extends BaseComponent{
                 $this->prepared_pairs[$key]['period']=round((strtotime($measuring_timestamp)-strtotime($data['measuring_timestamp']))/60);
                 $this->prepared_pairs[$key]['value'] = $last['value'] - $data['sensor_feature_value'];
                 $this->prepared_pairs[$key]['normilized_value']=$value_norm;
+
+                if ($last['value'] == 0 && $this->prepared_pairs[$key]['value'] < 0) {
+                    $this->prepared_pairs[$key]['value']= 0;
+                    $this->prepared_pairs[$key]['normilized_value'] = 0.0000;
+                }
             }
 
             $this->_logger->log(__METHOD__.' getDate: '.$measuring_timestamp);
