@@ -14,6 +14,7 @@ class Station extends CStubActiveRecord
     public static function model($className=__CLASS__){
         return parent::model($className);
     }
+
     public function beforeSave(){
         if(!$this->getUseLong()){
             if ($this->isNewRecord)
@@ -23,6 +24,17 @@ class Station extends CStubActiveRecord
             $this->updated = new CDbExpression('NOW()');
         }
         return parent::beforeSave();
+    }
+
+    public function afterFind()
+    {
+
+        if(empty($this->color)) {
+            $this->station_id_code ;
+            $this->color = Color::randomColor();
+            $this->save(false);
+        }
+        return parent::afterFind();
     }
 
 	public function tableName()

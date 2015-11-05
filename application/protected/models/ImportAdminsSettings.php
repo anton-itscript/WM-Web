@@ -7,6 +7,8 @@ class ImportAdminsSettings extends CFormModel
     public $imported_file;
     protected $data_after_validor;
     protected $required_tables;
+    protected $not_critical_tables;
+    protected $depends_tables;
 
     protected $result_success;
 
@@ -29,11 +31,19 @@ class ImportAdminsSettings extends CFormModel
             'station_sensor_feature',
             'sensor_handler',
             'sensor_handler_default_feature',
+
+        );
+
+        $this->not_critical_tables['settings'] = array(
             'schedule_report',
             'schedule_report_to_station',
             'schedule_report_destination',
             'ex_schedule_report',
             'ex_schedule_report_destination',
+        );
+
+        $this->depends_tables = array(
+            'schedule_report_to_station' =>array('schedule_report', 'schedule_report_destination')
         );
 
         $this->required_tables["user_settings"] = array("user","access_user","access_global");
@@ -86,8 +96,21 @@ class ImportAdminsSettings extends CFormModel
                 }
             }
         }
+
+        foreach ($this->depends_tables as $table => $tablesArray) {
+            if (!array_key_exists($table, $conf['data'])) {
+
+                foreach ($tablesArray as $t) {
+                    if (isset($conf['data'][$t])) {
+                        unset($conf['data'][$t]);
+                    }
+                }
+            }
+        }
+
         if ($has_error)
             return false;
+
 
         $this->data_after_validor   = $conf['data'];
         return true;
