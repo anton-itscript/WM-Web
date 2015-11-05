@@ -28,9 +28,8 @@ class Station extends CStubActiveRecord
 
     public function afterFind()
     {
-
+        $this->timezone_id = $this->timezone_id;
         if(empty($this->color)) {
-            $this->station_id_code ;
             $this->color = Color::randomColor();
             $this->save(false);
         }
