@@ -5,12 +5,12 @@ class m150817_075236_shedule_history_action extends CDbMigration
     protected $table="access_global";
 	public function up()
 	{
-        $this->insert($this->table, array('controller'=>'Site','action'=>'schedulestationhistory', 'enable'=>'1', 'description'=>''));
+        $this->insert($this->table, array('controller'=>'Site','action'=>'ScheduleStationHistory', 'enable'=>'1', 'description'=>''));
 	}
 
 	public function down()
 	{
-        $this->execute('DELETE FROM ' . $this->table . ' WHERE `action`="schedulestationhistory" and `controller` = "Site" ');
+        $this->execute('DELETE FROM ' . $this->table . ' WHERE `action`="ScheduleStationHistory" and `controller` = "Site" ');
 		echo "m150817_075236_shedule_history_action does not support migration down.\n";
 		return false;
 	}

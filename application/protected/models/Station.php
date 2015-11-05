@@ -10,13 +10,14 @@ class Station extends CStubActiveRecord
 	public $displaySensorsValues = array();
 	public $calculations = array();
 
+    public $beforeSave = true;
 
     public static function model($className=__CLASS__){
         return parent::model($className);
     }
 
     public function beforeSave(){
-        if(!$this->getUseLong()){
+        if(!$this->getUseLong() && $this->beforeSave){
             if ($this->isNewRecord)
                 $this->created = new CDbExpression('NOW()');
 
@@ -28,8 +29,9 @@ class Station extends CStubActiveRecord
 
     public function afterFind()
     {
-        $this->timezone_id = $this->timezone_id;
+        
         if(empty($this->color)) {
+            $this->beforeSave = false;
             $this->color = Color::randomColor();
             $this->save(false);
         }

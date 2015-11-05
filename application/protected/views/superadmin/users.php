@@ -8,7 +8,15 @@
                 <th>Role</th>
                 <?php foreach ($actions as $action){ ?>
                     <th>
-                        <?php echo $action['action']; ?>
+                        <?php
+                        $res = array();
+                        preg_match_all('/[A-Z][^A-Z]*?/Us',$action['action'],$res,PREG_SET_ORDER);
+
+
+                        foreach ($res as $act) {
+                            echo $act[0].'<br>';
+                        }
+                        ?>
                     </th>
                 <?php } ?>
                 <th>Tools</th>
@@ -24,7 +32,7 @@
                         $check = AccessUser::checkActionAtUser($user->user_id,$action->id); ?>
                         <td class ="<?php echo $check? 'EnableTD':'DisableTD'; ?>">
                             <?php echo CHtml::link(
-                                $check?'Enable':'Disable',
+                                $check ? 'On' : 'Off',
                                 array('superadmin/useraccesschange', 'user_id' => $user->user_id, 'action_id' => $action->id))
                             ?>
                         </td>
@@ -44,9 +52,7 @@
                             ?></td>
                         <?php foreach ($actions as $action){
                             $check = AccessUser::checkActionAtUser($user->user_id,$action->id); ?>
-                            <td class ="EnableTD">Enable
-
-                            </td>
+                            <td class ="EnableTD">On </td>
 
                         <?php } ?>
                         <td>
