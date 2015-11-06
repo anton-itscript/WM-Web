@@ -29,4 +29,5 @@ wm-db-image:
   - STARTUP_SQL_2:"/tmp/wm_clear_databases/wm_docker_long.sql"
   volumes:
   - /var/docker/wm/db/var/lib/mysql:/var/lib/mysql
+  - /var/docker/wm/web/www/files/backups:/var/wm_backups 
 
