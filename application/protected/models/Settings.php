@@ -18,8 +18,8 @@ class Settings extends CStubActiveRecord
             array('overwrite_data_on_import,overwrite_data_on_listening', 'boolean', 'falseValue' => 0, 'trueValue' => 1, 'on' => 'other'),
             array('current_company_name', 'required', 'on' => 'other'),
             array('current_company_name', 'length', 'max' => 50, 'allowEmpty' => false, 'on' => 'other'),
-            array('scheduled_reports_path,xml_messages_path', 'length', 'max' => 255, 'allowEmpty' => false, 'on' => 'other'),
-            array('scheduled_reports_path', 'checkScheduledReportsPath', 'on' => 'other'),
+           // array('scheduled_reports_path,xml_messages_path', 'length', 'max' => 255, 'allowEmpty' => false, 'on' => 'other'),
+           // array('scheduled_reports_path', 'checkScheduledReportsPath', 'on' => 'other'),
             array('xml_check_frequency', 'numerical', 'integerOnly' => true, 'on' => 'other'),
             array('local_timezone_id', 'length', 'allowEmpty' => false, 'on' => 'other'),
             
@@ -43,7 +43,7 @@ class Settings extends CStubActiveRecord
 		
         if (It::isLinux()) {
             $pattern = '/^[\/]([A-Za-z0-9-_\s\/\.]){1,251}$/';
-            $res[] = array('scheduled_reports_path, xml_messages_path', 'match', 'pattern' => $pattern, 'on' => 'other');
+            //$res[] = array('scheduled_reports_path, xml_messages_path', 'match', 'pattern' => $pattern, 'on' => 'other');
         } elseif (It::isWindows()) {
             $pattern = '/^([A-Z]{1})(:\\\)([A-Za-z0-9-_\s\.]+[\\\]?){1,251}$/';
             $res[] = array('scheduled_reports_path, xml_messages_path', 'match', 'pattern' => $pattern, 'on' => 'other');

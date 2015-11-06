@@ -838,26 +838,31 @@ class AdminController extends CController
         }
         if (isset($_REQUEST['create']))
         {
-            $backup_path = dirname(Yii::app()->request->scriptFile) .
-                DIRECTORY_SEPARATOR .'files'.
-                DIRECTORY_SEPARATOR .'backups';
+//            $backup_path = dirname(Yii::app()->request->scriptFile) .
+//                DIRECTORY_SEPARATOR .'files'.
+//                DIRECTORY_SEPARATOR .'backups';
+//
+//            if (It::isLinux())
+//            {
+//                $backup_path .= DIRECTORY_SEPARATOR .'`date +%Y_%m_%d`.sql';
+//            }
+//            else if (It::isWindows())
+//            {
+//                $backup_path .= DIRECTORY_SEPARATOR .'%DATE:~7,4%_%DATE:~3,2%_%DATE:~0,2%.sql';
+//            }
 
-            if (It::isLinux())
-            {
-                $backup_path .= DIRECTORY_SEPARATOR .'`date +%Y_%m_%d`.sql';
-            }
-            else if (It::isWindows())
-            {
-                $backup_path .= DIRECTORY_SEPARATOR .'%DATE:~7,4%_%DATE:~3,2%_%DATE:~0,2%.sql';
-            }
-
-            $command = Yii::app()->params['applications']['mysqldump_exe_path'] .
-                ' --user="'. Yii::app()->params['db_params']['username'] .'"'.
-                ' --password="'. Yii::app()->params['db_params']['password'] .'"'.
-                ' --result-file="'. $backup_path .'" '.
-                Yii::app()->params['db_params']['dbname'];
+//            $command = Yii::app()->params['applications']['mysqldump_exe_path'] .
+//                ' --user="'. Yii::app()->params['db_params']['username'] .'"'.
+//                ' --password="'. Yii::app()->params['db_params']['password'] .'"'.
+//                ' --result-file="'. $backup_path .'" '.
+//                Yii::app()->params['db_params']['dbname'];
 
 
+            $backup_name= '`date +%Y_%m_%d`.sql';
+            $command = 'echo '.$backup_name . ' >'. dirname(Yii::app()->request->scriptFile) .
+                DIRECTORY_SEPARATOR . 'files' .
+                DIRECTORY_SEPARATOR .'backups' .
+                DIRECTORY_SEPARATOR . 'new';
 
             set_time_limit(1800); // 30min
 
@@ -878,27 +883,27 @@ class AdminController extends CController
                 DIRECTORY_SEPARATOR .'files'.
                 DIRECTORY_SEPARATOR .'backups';
 
-            if (It::isLinux())
-            {
-                $backup_path .= DIRECTORY_SEPARATOR .'`date +%Y_%m_%d`_long.sql';
-            }
-            else if (It::isWindows())
-            {
-                $backup_path .= DIRECTORY_SEPARATOR .'%DATE:~7,4%_%DATE:~3,2%_%DATE:~0,2%_long.sql';
-            }
+//            if (It::isLinux())
+//            {
+//                $backup_path .= DIRECTORY_SEPARATOR .'`date +%Y_%m_%d`_long.sql';
+//            }
+//            else if (It::isWindows())
+//            {
+//                $backup_path .= DIRECTORY_SEPARATOR .'%DATE:~7,4%_%DATE:~3,2%_%DATE:~0,2%_long.sql';
+//            }
 
-//            $command = getConfigValue('mysqldump_exe_path') .
-//                ' --user="'. getConfigDbLongValue('database_user') .'"'.
-//                ' --password="'. getConfigDbLongValue('database_password') .'"'.
+
+//            $command = Yii::app()->params['applications']['mysqldump_exe_path'] .
+//                ' --user="'. Yii::app()->params['db_long_params']['username'] .'"'.
+//                ' --password="'. Yii::app()->params['db_long_params']['password'] .'"'.
 //                ' --result-file="'. $backup_path .'" '.
-//                getConfigDbLongValue('database_dbname');
+//                Yii::app()->params['db_long_params']['dbname'];
 
-            $command = Yii::app()->params['applications']['mysqldump_exe_path'] .
-                ' --user="'. Yii::app()->params['db_long_params']['username'] .'"'.
-                ' --password="'. Yii::app()->params['db_long_params']['password'] .'"'.
-                ' --result-file="'. $backup_path .'" '.
-                Yii::app()->params['db_long_params']['dbname'];
-
+            $backup_name= '`date +%Y_%m_%d`_long.sql';
+            $command = 'echo '.$backup_name . ' >'. dirname(Yii::app()->request->scriptFile) .
+                DIRECTORY_SEPARATOR . 'files' .
+                DIRECTORY_SEPARATOR .'backups' .
+                DIRECTORY_SEPARATOR . 'new_long';
 
             set_time_limit(1800); // 30min
 
