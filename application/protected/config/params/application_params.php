@@ -4,7 +4,7 @@
   'mysqldump_exe_path' => NULL,
   'mysql_exe_path' => NULL,
   'site_url_for_console' => 'http://'.$_SERVER["HTTP_HOST"],
-  'console_app_path' => '/var/www/protected/models/../../www/console.php',
-  'backups_path' => '/var/www/protected/models/../../www/files/backups',
+  'console_app_path' => '/usr/share/nginx/html/www/console.php',
+  'backups_path' => '/usr/share/nginx/html/www/files/backups',
 ) 
  ?>
