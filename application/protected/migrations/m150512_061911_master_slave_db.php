@@ -54,7 +54,7 @@ class m150512_061911_master_slave_db extends CDbMigration
         $command->execute();
 
 
-       
+
 	}
 
 	public function down()

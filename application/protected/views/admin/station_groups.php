@@ -3,7 +3,7 @@
     $groups     = $form->groups;
     $data       = $form->data;
 ?>
-<?php $this->renderPartial('../_tmpls/admin_station_submenu', array(), false, true ); ?>
+
 
 <div class="middlenarrow grouplist">
     <h1>Station Group</h1><?php

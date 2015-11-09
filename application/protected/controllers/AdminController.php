@@ -1466,6 +1466,8 @@ class AdminController extends CController
             $sql_order = "`t1`.`sensor_id` ".$fparams['order_direction'];
         } elseif ($fparams['order_field'] == 'value') {
             $sql_order = "CAST(`t1`.`sensor_feature_value` AS DECIMAL(15,4)) ".$fparams['order_direction'];
+        } else {
+            $sql_order = "`t1`.`measuring_timestamp` ";
         }
 
 

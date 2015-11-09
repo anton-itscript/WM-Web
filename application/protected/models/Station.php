@@ -29,7 +29,7 @@ class Station extends CStubActiveRecord
 
     public function afterFind()
     {
-        
+
         if(empty($this->color)) {
             $this->beforeSave = false;
             $this->color = Color::randomColor();
@@ -486,18 +486,28 @@ class Station extends CStubActiveRecord
      * @return array
      *         [ station_id => 'station_id_code, display_name']
      */
-    public static function prepareStationList(array $station_type)
+    public static function prepareStationList(array $station_type , $color_flag=true)
     {
         $qb = new CDbCriteria();
         $qb->select = ['station_id', 'station_id_code', 'display_name','color'];
         $qb->addInCondition('station_type',$station_type);
         $qb->order = 'station_id_code';
 
-        if ($stations = Station::model()->findAll($qb)) {
-            return CHtml::listData($stations, 'station_id', function($station){
+        if ($color_flag==true) {
+            if ($stations = Station::model()->findAll($qb)) {
+                return CHtml::listData($stations, 'station_id', function($station){
                     return  $station->station_id_code . ', ' . $station->display_name . '<span style="background-color:'.$station->color.';" class="station-color"> </span>';
                 });
+            }
+
+        } else {
+            if ($stations = Station::model()->findAll($qb)) {
+                return CHtml::listData($stations, 'station_id', function($station){
+                    return  $station->station_id_code . ', ' . $station->display_name;
+                });
+            }
         }
+
 
         return array();
     }

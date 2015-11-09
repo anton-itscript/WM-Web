@@ -133,7 +133,7 @@ class MainMenu
                     "label"=>"superadmin_longdb",
                     "items"=>array(
                         'longdbsetup'   => array('label' => 'superadmin_longdbsetup'),
-                        'longdbtask'    => array('label' => 'superadmin_longdbsetup'),
+                        'longdbtask'    => array('label' => 'superadmin_longdbtask'),
                     )
                 ),
                 'heartbeatreport'=>array(

@@ -155,9 +155,7 @@ class m150818_072745_ODSS_reports extends CDbMigration
         $command=$connection->createCommand($sql);
         $command->execute();
 
-
-        echo "m150818_072745_ODSS_reports does not support migration down.\n";
-        return false;
+        
     }
 
     /*

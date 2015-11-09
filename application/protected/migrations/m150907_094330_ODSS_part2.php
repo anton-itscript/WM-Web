@@ -194,8 +194,7 @@ class m150907_094330_ODSS_part2 extends CDbMigration
         $command=$connection->createCommand($sql);
         $command->execute();
 
-		echo "m150907_094330_ODSS_part2 does not support migration down.\n";
-		return false;
+
 	}
 
 	/*

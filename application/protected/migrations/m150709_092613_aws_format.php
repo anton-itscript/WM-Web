@@ -12,8 +12,7 @@ class m150709_092613_aws_format extends CDbMigration
 	public function down()
 	{
         $this->execute('DELETE FROM ' . $this->table . ' WHERE `key`="AWS_FORMAT"');
-		echo "m150709_092613_aws_format does not support migration down.\n";
-		return false;
+
 	}
 
 	/*

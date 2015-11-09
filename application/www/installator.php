@@ -37,7 +37,7 @@ date_default_timezone_set('UTC');
 				DIRECTORY_SEPARATOR . 'config' . 
 				DIRECTORY_SEPARATOR . 'install.php';
 
-	require_once($yii);
+//	require_once($yii);
 
-	Yii::createWebApplication($config)->run();
+//	Yii::createWebApplication($config)->run();
 ?>

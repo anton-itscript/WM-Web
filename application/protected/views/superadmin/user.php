@@ -76,3 +76,32 @@
     </table>
     <?php echo CHtml::endForm(); ?>
 </div>
+
+
+<script>
+    $(document).ready(function(){
+        $('#check_all_features').click(function(){
+
+            if ($(this).hasClass('checked')) {
+
+                var inputs =  $('#check_all_features').closest('td').find('input')
+                for (var i=0;i<inputs.length;i++) {
+                    $(inputs[i]).removeAttr('checked');
+                    inputs[i].checked = false;
+                }
+                $(this).removeClass('checked')
+                $(this).attr('checked','')
+            } else {
+
+                var inputs =  $('#check_all_features').closest('td').find('input')
+                for (var i=0;i<inputs.length;i++) {
+                    $(inputs[i]).attr('checked','checked');
+                    inputs[i].checked = true;
+                }
+                $(this).attr('checked','checked')
+                $(this).addClass('checked')
+
+            }
+        })
+    });
+</script>

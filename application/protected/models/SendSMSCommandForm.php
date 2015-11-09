@@ -33,7 +33,7 @@ class SendSMSCommandForm extends CFormModel
     public function getStations()
     {
         if (!$this->stations) {
-            $this->stations = Station::prepareStationList(['aws', 'rain']);
+            $this->stations = Station::prepareStationList(['aws', 'rain'],false);
         }
 
         return $this->stations;

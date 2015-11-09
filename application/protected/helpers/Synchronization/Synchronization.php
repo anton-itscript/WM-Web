@@ -59,8 +59,6 @@ class Synchronization
 
         $this->_data                    = $this->_loadedFile->getFileData();
 
-
-
         $this->process_status           = $this->_data['PROCESS_STATUS']['value'];
         $this->forwarding_messages_ip   = $this->_data['FOR_COMES_FORWARDING_MESSAGES_IP']['value'];
         $this->forwarding_messages_port = $this->_data['FOR_COMES_FORWARDING_MESSAGES_PORT']['value'];

@@ -11,8 +11,7 @@ class m150817_075236_shedule_history_action extends CDbMigration
 	public function down()
 	{
         $this->execute('DELETE FROM ' . $this->table . ' WHERE `action`="ScheduleStationHistory" and `controller` = "Site" ');
-		echo "m150817_075236_shedule_history_action does not support migration down.\n";
-		return false;
+
 	}
 
 	/*

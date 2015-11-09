@@ -70,6 +70,7 @@ return array(
     'superadmin_accessedit'         => 'Action',
     'superadmin_longdb'             => 'Long DB',
     'superadmin_longdbsetup'        => 'DB Setup',
+    'superadmin_LongDbSetup'        => 'DB Setup',
     'superadmin_longdbtask'         => 'Task DB',
     'superadmin_heartbeatreport'    => 'Heartbeat Report',
     'superadmin_config'             => 'Config',

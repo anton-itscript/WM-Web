@@ -69,6 +69,7 @@ return array(
     'superadmin_syncsettings'       => 'Setting up synchronization',
     'superadmin_longdb'             => 'Long term data',
     'superadmin_longdbsetup'        => 'DB Setup',
+    'superadmin_LongDbSetup'        => 'DB Setup',
     'superadmin_longdbtask'         => 'Schedule task',
     'superadmin_heartbeatreport'    => 'Heartbeat Report',
     'superadmin_config'             => 'Config',

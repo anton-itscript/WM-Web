@@ -47,12 +47,12 @@ class SyncDBCommand extends CConsoleCommand{
      * @return bool
      */
     protected function setOptions(){
+
         try{
             //self::$_status = ConfigManager::getConfigSection('install_database_status','done')==1?true:false;
 
 
             self::$_status = Yii::app()->params['install']['install_database_long_status']==1?true:false;
-
 //            $conf = ConfigManager::getConfigSection('database_long_sync');
             $conf =  Yii::app()->params['db_long_sync_config'];
             if($conf['max_row'])self::$_maxRow = self::$_maxRowTemp = $conf['max_row'];
