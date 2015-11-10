@@ -77,7 +77,6 @@ RUN chown -Rf www-data.www-data /usr/share/nginx/html/ &&  chmod -R 0777 /usr/sh
 
 run uname -mrs
 
-
 VOLUME ["/usr/share/nginx/html/log"]
 VOLUME ["/usr/share/nginx/html/protected/runtime"]
 VOLUME ["/usr/share/nginx/html/protected/nosqlvars"]
