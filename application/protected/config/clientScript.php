@@ -169,6 +169,7 @@ return [
             'js'      => ['js/custom/jquery.ba-bbq.js'],
             'depends' => ['jquery.datePicker']
         ],
+        'admin.smscommandsetup'      => [],
         'admin.generatesmscommand'   => [],
     ]
 ];
